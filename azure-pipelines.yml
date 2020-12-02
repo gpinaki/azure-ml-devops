@@ -8,16 +8,16 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionId: '81eee9c6-c200-46d9-90b1-ff0261cef0b6'
+  azureServiceConnectionId: $(ML_DEVOPS_SERVICECONNECTION_ID)
   
   # Web app name
-  webAppName: 'udacity-ml-app'
+  webAppName: $(WEBAPP_NAME)
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'udacity-ml-app'
+  environmentName: $(ENV)
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -80,7 +80,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : udacity-ml-app'
+            displayName: 'Deploy Azure Web App : $(webAppName) in $(ENV)'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
