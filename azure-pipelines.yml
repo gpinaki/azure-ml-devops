@@ -46,9 +46,9 @@ stages:
     - script: |
         python -m venv antenv
         source antenv/bin/activate
-        python -m pip install --upgrade pip
         make install
-        make lint
+        python -m pip install flake8
+        flake8 .
       workingDirectory: $(projectRoot)
       displayName: 'Lint Step Added'
 
