@@ -33,3 +33,4 @@ Verify app is running in http://udacity-ml-app.azurewebsites.net
   "src_path": "//Users//pinakiguha//udacity-git-course//azure-ml-devops"
 }
 
+azureServiceConnectionId: 'b3df3316-0ad8-4f30-99ff-9b4dce0d4c12'
