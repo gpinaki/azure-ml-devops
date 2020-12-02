@@ -25,5 +25,5 @@ curl -d '{
    }
 }'\
      -H "Content-Type: application/json" \
-     -X POST https://pg-ml-app.azurewebsites.net:$PORT/predict 
+     -X POST https://udacity-ml-app.azurewebsites.net:$PORT/predict 
      #your application name <yourappname>goes here
