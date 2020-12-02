@@ -41,7 +41,7 @@ stages:
         pip install setup
         pip install -r requirements.txt
       workingDirectory: $(projectRoot)
-      displayName: "Install requirements"
+      displayName: 'Install requirements'
 
     - script: |
       python -m venv antenv
@@ -49,8 +49,8 @@ stages:
       make install
       make lint
     workingDirectory: $(projectRoot)
-    displayName: "Run List test"
-    
+    displayName: 'Run List test'
+
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
